@@ -395,7 +395,13 @@
     <div class="term-body" id="termBody"></div>
   </div>
   <div class="footer-note">Bonyeza jibu ➜ ona ufafanuzi ➜ endelea</div>
-  <div class="footer-note"><a href="privacy.html" style="color:var(--text-faint);text-decoration:underline;">Privacy Policy</a></div>
+  <div class="footer-note">
+    <a href="about.html" style="color:var(--text-faint);text-decoration:underline;">About</a>
+    &nbsp;·&nbsp;
+    <a href="contact.html" style="color:var(--text-faint);text-decoration:underline;">Contact</a>
+    &nbsp;·&nbsp;
+    <a href="privacy.html" style="color:var(--text-faint);text-decoration:underline;">Privacy Policy</a>
+  </div>
 </div>
 
 <script>
@@ -4099,6 +4105,21 @@ function restart(){
 }
 
 renderLevelSelect();
+
+// Lightweight deterrents against casual page-saving/copying.
+// Note: these do not stop technical users — view-source, browser
+// devtools, and saved network copies remain possible regardless.
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  const k = e.key.toLowerCase();
+  if (
+    (e.ctrlKey || e.metaKey) && (k === 's' || k === 'u' || k === 'p') ||
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (k === 'i' || k === 'j' || k === 'c'))
+  ) {
+    e.preventDefault();
+  }
+});
 </script>
 </body>
 </html>
