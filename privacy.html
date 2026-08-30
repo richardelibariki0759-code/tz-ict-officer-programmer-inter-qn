@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --bg:#0e1219; --panel:#161c27; --panel-alt:#1c2432; --border:#2a3242;
+    --text:#e8ecf1; --text-dim:#8b95a7; --text-faint:#5a6478;
+    --accent:#f2b134;
+    --mono: ui-monospace,'JetBrains Mono','SFMono-Regular',Menlo,Consolas,monospace;
+    --sans: -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, #182033 0%, transparent 45%),
+      radial-gradient(circle at 85% 100%, #1a2440 0%, transparent 45%),
+      var(--bg);
+    color:var(--text); font-family:var(--sans); min-height:100vh;
+    padding:32px 16px 64px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;}
+  .term{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+    overflow:hidden;box-shadow:0 20px 60px -20px rgba(0,0,0,0.6);}
+  .term-bar{display:flex;align-items:center;gap:16px;padding:10px 16px;
+    background:var(--panel-alt);border-bottom:1px solid var(--border);}
+  .dots{display:flex;gap:7px;} .dot{width:11px;height:11px;border-radius:50%;}
+  .dot.r{background:#e2574c;} .dot.y{background:#f2b134;} .dot.g{background:#4fb379;}
+  .term-title{font-family:var(--mono);font-size:12.5px;color:var(--text-dim);flex:1;text-align:center;margin-right:44px;}
+  .term-body{padding:28px 28px 40px;}
+  @media (max-width:600px){ .term-body{padding:20px 16px 28px;} body{padding:18px 8px 48px;} }
+
+  h1{font-size:22px;margin:0 0 6px;}
+  .updated{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin:0 0 24px;}
+  h2{font-size:15px;color:var(--accent);margin:26px 0 8px;font-family:var(--mono);letter-spacing:.2px;}
+  p{font-size:14.5px;line-height:1.7;color:var(--text-dim);margin:0 0 10px;}
+  a{color:var(--accent);}
+  .footer-note{text-align:center;color:var(--text-faint);font-size:12px;margin-top:18px;font-family:var(--mono);}
+  .back{display:inline-block;margin-top:8px;}
+</style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: August 2026</p>
+<div class="wrap">
+  <div class="term">
+    <div class="term-bar">
+      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+      <div class="term-title">privacy.policy</div>
+    </div>
+    <div class="term-body">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: August 2026</p>
 
-  <p>This website ("we", "our", "us") provides free practice questions for ICT Officer (Programmer) interviews in Tanzania. This page explains how we handle information when you visit.</p>
+      <p>This website ("we", "our", "us") provides free practice questions for ICT Officer (Programmer) interviews in Tanzania. This page explains how we handle information when you visit.</p>
 
-  <h2>Information We Collect</h2>
-  <p>We do not directly collect personal information such as your name or email address. However, third-party services we use (such as advertising providers) may collect data automatically, including your IP address, browser type, device information, and browsing behavior.</p>
+      <h2>// Information We Collect</h2>
+      <p>We do not directly collect personal information such as your name or email address. However, third-party services we use (such as advertising providers) may collect data automatically, including your IP address, browser type, device information, and browsing behavior.</p>
 
-  <h2>Cookies and Advertising</h2>
-  <p>This site uses Google AdSense to display advertisements. Google and its partners may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank">Google Ads Settings</a>.</p>
-  <p>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the Internet.</p>
+      <h2>// Cookies and Advertising</h2>
+      <p>This site uses Google AdSense to display advertisements. Google and its partners may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank">Google Ads Settings</a>.</p>
+      <p>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the Internet.</p>
 
-  <h2>Third-Party Links</h2>
-  <p>Our site may contain links to other websites. We are not responsible for the privacy practices of those sites.</p>
+      <h2>// Third-Party Links</h2>
+      <p>Our site may contain links to other websites. We are not responsible for the privacy practices of those sites.</p>
 
-  <h2>Children's Privacy</h2>
-  <p>This site does not knowingly collect personal information from children under 13.</p>
+      <h2>// Children's Privacy</h2>
+      <p>This site does not knowingly collect personal information from children under 13.</p>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
+      <h2>// Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, please contact us via the repository's GitHub page.</p>
+      <h2>// Contact</h2>
+      <p>If you have questions about this Privacy Policy, please contact us via the repository's GitHub page.</p>
 
-  <p><a href="index.html">&larr; Back to home</a></p>
+      <a class="back" href="index.html" style="color:var(--text-faint);text-decoration:underline;font-family:var(--mono);font-size:13px;">&larr; Back to home</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
